@@ -19,20 +19,20 @@ export {
 
 export const ALL_DATA_FAKE = [
     {
-        name: "lexma g88",
-        type: "mouse",
+        name: "keyboard type R",
+        type: "keyboard",
         art: img_2,
         coin: 22.69
     },
     {
-        name: "keyboard g88",
-        type: "keyboard",
+        name: "Head g88",
+        type: "headset",
         art: img_3,
         coin: 20.11
     },
     {
-        name: "Head g88",
-        type: "headset",
+        name: "lexma light",
+        type: "mouse",
         art: img_4,
         coin: 14.55
     },
@@ -43,33 +43,28 @@ export const ALL_DATA_FAKE = [
         coin: 160.0
     },
     {
-        name: "PC g88",
-        type: "computer",
+        name: "Pro ACT",
+        type: "oculus",
         art: img_6,
         coin: 1400.5
     },
     {
         name: "lexma g88",
-        type: "computer",
+        type: "oculus",
         art: img_7,
         coin: 1400.5
     },
     {
-        name: "lexma g88",
+        name: "PS4 G88",
         type: "oculus",
         art: img_8,
         coin: 1000.0
     },
     {
         name: "lexma g88",
-        type: "oculus",
-        art: img_9,
-        coin: 990.5
-    },
-    {
-        name: "PS4 G88",
-        type: "oculus",
+        type: "computer",
         art: img_10,
-        coin: 9990.5
+        coin: 9990.5,
+        count: 1
     }
 ]
