@@ -1,0 +1,116 @@
+.local-main {
+    width: calc(100% - 363px);
+    height: 100%;
+    color: var(--Color-Light) !important;
+    position: relative;
+}
+
+.local-main .group-info {
+    width: 150px;
+    margin: 1em 4em 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.local-main .group-info button {
+    color: var(--Color-Light) !important;
+}
+
+.local-main .group-info button:hover {
+    transition: all 0.2s ease-out;
+    color: var(--Purple-Dark) !important;
+}
+
+.local-main .inputSearch {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 382px;
+    height: 46px;
+
+    margin: 40px 0 0 71px;
+    border-radius: 15px;
+    overflow: hidden;
+    color: var(--Color-Light) !important;
+    background: var(--Gray-Ico);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.local-main .inputSearch button {
+    width: 20%;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--Color-Gray);
+}
+
+.local-main .inputSearch input {
+    width: 77%;
+    height: 80%;
+    outline: none;
+    border: none;
+    font-size: larger;
+    background: inherit;
+    color: inherit;
+}
+
+.local-main .group-new {
+    width: 80%;
+    height: 250px;
+    margin: 2em 71px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    transition: all .3s;
+    background-image: radial-gradient(ellipse at top,
+            #DA00FE 10%,
+            #A100ED);
+}
+
+.local-main .group-new .group-radio{
+    position: absolute;
+    bottom: .2em;
+}
+
+.local-main .group-new .new-item {
+    width: 100%;
+    display: flex;
+}
+
+.local-main .group-new .new-item .container-title .title {
+    margin: .3em 0;
+}
+
+.local-main .group-new .new-item .container-title .title-2 {
+    margin: .3em 0 2em 0;
+}
+
+.local-main .group-new .new-item .container-title button span {
+    margin-left: 0.4em;
+}
+
+.local-main .group-new .new-item>div {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.local-main .group-new .new-item>div:first-child {
+    width: 45%;
+    padding-left: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.local-main .group-new .new-item img {
+    object-fit: fill;
+    width: 110%;
+}
