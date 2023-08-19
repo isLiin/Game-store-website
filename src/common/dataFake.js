@@ -64,7 +64,6 @@ export const ALL_DATA_FAKE = [
         name: "lexma g88",
         type: "computer",
         art: img_10,
-        coin: 9990.5,
-        count: 1
+        coin: 9990.5
     }
 ]
