@@ -100,7 +100,7 @@
 .Menu-side-bar__Group-Menu .item-menu:not(:hover) .item-icon,
 .Menu-side-bar__Group-Category .item-menu:not(:hover) .item-icon{
     transition: all 0.2s ease-out;
-    filter: blur(4px);
+    /* filter: blur(4px); */
 }
 .Menu-side-bar__Group-Menu .item-menu .item-icon,
 .Menu-side-bar__Group-Category .item-menu .item-icon{

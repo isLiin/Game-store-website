@@ -155,11 +155,28 @@
 .Product .product-position{
     width: 50%;
     height: 50px;
+    margin: .5em 0 .8em;
     display: flex;
 }
 .Product .product-position button{
     text-transform: capitalize;
     color: var(--Color-Light);
+    height: 60%;
+    margin: 0 .2em;
+    border-radius: 17px;
+    border: 1px solid var(--Gray-Ico-2);
+}
+.Product .product-position button>span{
+    margin: 0 !important;
+}
+.Product .product-position button.fillter{
+    border-radius: 10px;
+    color: var(--Purple-Dark);
+    border-color: var(--Purple-Light);
+}
+.Product .product-position button.active{
+    border-color: var(--Purple-Light);
+    background: var(--Purple-Dark);
 }
 .Product .product-position button span{
     margin: 0 .3em;

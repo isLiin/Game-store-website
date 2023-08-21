@@ -206,7 +206,12 @@ const ScreenMain = (props) => {
                         <div className="title-2">
                             VR box 360 original complete geme.VR gaming complete set of 2 remotes.
                         </div>
-                        <Button variant="contained">
+                        <Button variant="contained" sx={{
+                            background: "#D9D9D9",
+                            color: "#DA00FE",
+                            textTransform: "capitalize",
+                            borderRadius: "13px"
+                        }}>
                             <BsBoxSeamFill />
                             <span>Order now</span>
                         </Button>
@@ -216,9 +221,9 @@ const ScreenMain = (props) => {
                     </div>
                 </div>
                 <div className="group-radio">
-                    <Radio name="item-new" checked />
-                    <Radio name="item-new" />
-                    <Radio name="item-new" />
+                    <Radio name="item-new" size="small" color="default" />
+                    <Radio name="item-new" size="small" color="default" checked />
+                    <Radio name="item-new" size="small" color="default" />
                 </div>
             </div>
             <div className="Product">
@@ -226,7 +231,7 @@ const ScreenMain = (props) => {
                 <div className="product-position">
                     <div className="btn">
                         <Tooltip title="Top" arrow>
-                            <Button variant="text">Top</Button>
+                            <Button className="active" variant="text">Top</Button>
                         </Tooltip>
                     </div>
                     <div className="btn">
@@ -241,7 +246,7 @@ const ScreenMain = (props) => {
                     </div>
                     <div className="btn">
                         <Tooltip title="Fillter" arrow>
-                            <Button variant="text">
+                            <Button className="fillter" variant="text">
                                 <BsFillFunnelFill />
                                 <span>Fillter</span>
                             </Button>
@@ -261,7 +266,10 @@ const ScreenMain = (props) => {
                                         marginLeft: "1em"
                                     }}>{item.coin}</span>
                                 </div>
-                                <Button sx={{ fontSize: ".8em" }}
+                                <Button sx={{
+                                    fontSize: ".8em",
+                                    color: "#D9D9D9"
+                                }}
                                     onClick={() => handleAddStore(item)}
                                 >
                                     <BsPlusCircleFill />
