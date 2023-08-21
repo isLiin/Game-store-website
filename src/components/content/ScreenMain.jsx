@@ -22,8 +22,10 @@ const ScreenMain = (props) => {
     var total = 0;
     const [openStore, setOpenStore] = useState(false);
     const [openNoti, setOpenNoti] = useState(false);
-    const [notificate, setNotificate] = useState([]);
     const [store, setStore] = useState([]);
+    // const [notificate, setNotificate] = useState([]);
+    const [notificateStote, setNotificateStore] = useState(3);
+    const [notificateNoti, setNotificateNoti] = useState(2);
 
     const handleClickOpen = (dialog) => {
         return dialog ? setOpenNoti(true) : setOpenStore(true);
@@ -33,6 +35,11 @@ const ScreenMain = (props) => {
         return dialog ? setOpenNoti(false) : setOpenStore(false);
     };
 
+    /**
+     * 
+     * @param {*} item 
+     * @returns Add item to store
+     */
     const handleAddStore = (item) => {
         let arr = [];
         let checked = store.includes(item);
@@ -44,18 +51,25 @@ const ScreenMain = (props) => {
         } else {
             arr = [...store, item];
         }
+        setNotificateStore(notificateStote + 1);
         return setStore(arr);
     }
 
+    /**
+     * 
+     * @param {*} item 
+     * @returns Delete item in store
+     */
     const handleRemoveStore = (item) => {
-        // if (store.indexOf(item) === 0) {
-        //     store.shift()
-        //     return store
-        // } else {
-        // }
+        (notificateStote > 0) ? setNotificateStore(notificateStote - 1) : setNotificateStore(notificateStote);
         return setStore(store.slice(store.indexOf(item)));
     }
 
+    /**
+     * 
+     * @param {*} price 
+     * @returns Total bill
+     */
     const billStore = (price) => {
         total += price;
     }
@@ -151,14 +165,16 @@ const ScreenMain = (props) => {
                             onClick={() => handleClickOpen(true)}>
                             <BsBellFill />
                         </IconButton>
+                        {(notificateNoti !== 0) ? <div className="sl-store">{notificateNoti}</div> : <></>}
                     </Tooltip>
                 </div>
                 <div className="store">
-                    <Tooltip title="Store" arrow>
+                    <Tooltip title="..." arrow>
                         <IconButton aria-label="Store"
                             onClick={() => handleClickOpen(false)}>
                             <BsBoxSeamFill />
                         </IconButton>
+                        {(notificateStote !== 0) ? <div className="sl-store">{notificateStote}</div> : <></>}
                     </Tooltip>
                 </div>
                 <div className="user">
@@ -234,8 +250,8 @@ const ScreenMain = (props) => {
                 </div>
                 <div className="product-list-items">
                     {props.data.map((item, index) =>
-                        <Tooltip key={index} title={item.name + " - " + item.type} placement="top" arrow>
-                            <div className="component-card">
+                        <Tooltip key={index} title={item.name + " - " + item.type + index} placement="top" arrow>
+                            <div className="component-card" key={index}>
                                 <img src={item.art} alt={item.type} />
                                 <div className="name-item">{item.name}</div>
                                 <div className="type-item">{item.type}</div>
